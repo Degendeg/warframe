@@ -21,6 +21,21 @@ $(document).ready(function() {
             $('.th-tradable').empty().prepend('<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>');
         }
     }
+	
+    function removeShit() {
+		$('.table-mods').hide();
+		$('.typeahead').val("");
+        $('.th-name').empty();
+        $('.th-description').text("");
+        $('.th-polarity').empty();
+        $('.th-drain').text("");
+		$('.mod-image').empty();
+		$('.th-tradable').empty();
+    }
+	
+	$('#clearBtn').click(function () {
+		removeShit();
+	});
 
     $.get("/items", function(data) {
         var mods = data.filter(checkForMods);
@@ -29,8 +44,6 @@ $(document).ready(function() {
         $input.typeahead({
             source: mods
         });
-		
-		console.log(mods[0]);
 
         $input.change(function() {
             var current = $input.typeahead("getActive");
