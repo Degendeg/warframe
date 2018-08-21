@@ -1,5 +1,6 @@
-# Chessplay
+# warframe
+Search for mods. NodeJS as backend.
 
-My multiplayer chess app with Node.js as back-end and HTML, css and javascript (jQuery) as front-end with socket.io for real-time communication.
+Credit goes to the guys behind https://github.com/WFCD/warframe-items for the API.
 
-Found here: http://chessplay.azurewebsites.net
+I am in no way affiliated with Digital Extremes or the development of Warframe
