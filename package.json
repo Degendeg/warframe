@@ -1,0 +1,18 @@
+{
+  "name": "chessGame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "nodemon": "^1.18.3",
+    "warframe-items": "^1.29.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

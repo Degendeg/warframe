@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Mods</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/default.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+
+    <div class="container">
+	
+	<div class="jumbotron">
+	  <p class="lead">This is a simple page that enables you to search for mods.</p>
+	  <hr class="my-4">
+	  <p>Credit goes to the guys behind <a href="https://github.com/WFCD/warframe-items" target="_blank">Warframe-items</a> for the API.</p>
+	  <p>I am in no way affiliated with Digital Extremes or the development of Warframe.</p>
+	  <p class="lead">
+		<a class="btn btn-primary btn-lg" href="http://warframe.wikia.com/wiki/Beginners_Guide" target="_blank" role="button">Learn more about Warframe</a>
+	  </p>
+	</div>
+	
+	<div class="well">
+	  <div class="form-group">
+		<label for="inputlg">Search for the desired mod:</label>
+		<input class="form-control input-lg typeahead" type="text" class="typeahead" data-provide="typeahead" />
+	  </div>
+	</div>
+	
+    <div class="row">
+        <div class="col-xs-8">
+			<div class="well">
+				<table class="table table-mods table-striped">
+				  <thead>
+					<tr>
+					  <th scope="col">Name</th>
+					  <th scope="col">Description</th>
+					  <th scope="col">Polarity</th>
+					  <th scope="col">Drain</th>
+					  <th scope="col">Tradable</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td class="th-name"></td>
+					  <td class="th-description"></td>
+					  <td class="th-polarity"></td>
+					  <td class="th-drain"></td>
+					  <td class="th-tradable"></td>
+					</tr>
+				  </tbody>
+				</table>
+			</div>
+        </div>
+        <div class="col-xs-4">
+			<div class="well">
+				<div class="mod-image"></div>
+			</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+		<p>&copy; Sebastian Degerman - <span class="thisYear"></span></p>
+    </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+    <script src="js/default.js"></script>
+
+  </body>
+
+</html>

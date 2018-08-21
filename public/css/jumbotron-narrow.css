@@ -1,0 +1,200 @@
+/* Space out content a bit */
+
+body {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #f2f2f2;
+}
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+/* Custom page header */
+
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+
+/* Make the masthead heading the same height as the navigation */
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+
+/* Custom page footer */
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+
+/* Customize container */
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  background: #d9d9d9;
+}
+
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+
+/* Supporting marketing content */
+
+.marketing {
+  margin: 40px 0;
+}
+
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+
+/* Responsive: Portrait tablets and up */
+
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+/* Custom css */
+
+.dropdown-menu {
+	left: -75px !important;
+	padding: 5px !important;
+}
+
+a.colorBtn {
+	cursor: pointer !important;
+	font-weight: bold !important;
+}
+
+a.colorBtn:hover {
+	background: #cccccc !important;
+}
+
+.chosen {
+	background: #cccccc !important;
+}
+
+.margin-left {
+    display: inline-block;
+    margin-left: 2%;
+}
+
+#settingsModal {
+  margin-top: 5%;
+}
+
+input[type='text'],
+input[type='number'],
+textarea {
+  font-size: 16px;
+}
+
+.logo {
+  width: 25% !important;
+  height: auto !important;
+  margin-top: -5% !important;
+}
+
+#board {
+  width: 100%;
+}
+
+#playerJoin {
+  display: none;
+}
+
+#playerDisc {
+  display: none;
+}
+
+#checkAlert {
+  display: none;
+}
+
+a {
+  color: #777;
+  text-decoration: none;
+  outline: 0 !important;
+}
+
+button {
+  outline: 0 !important;
+}
+
+a:hover {
+  color: #777;
+  text-decoration: none;
+}
+
+.piece-417db {
+  cursor: pointer;
+}
+
+
+/* Chat */
+
+#messages {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  color: #000;
+}
+
+#messages .chat-li {
+  padding: 5px 10px;
+  background: #bfbfbf;
+}
+
+#messages li {
+  padding: 5px 10px;
+  background: #d9d9d9;
+}
