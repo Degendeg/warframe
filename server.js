@@ -14,7 +14,7 @@ app.get('/', function(req, res) {
 
 app.get('/items', basicAuth({
   users: {
-    'Frisk999': 'Mobil12345'
+    'urbz': 'seiko12345'
   },
   challenge: true,
   realm: 'Imb4T3st4pp',
