@@ -14,7 +14,7 @@ $(document).ready(function() {
         $('.th-description').text(current.description);
         $('.th-polarity').empty().prepend('<img src="../../img/polarity/' + current.polarity.toLowerCase() + '.png" alt="" />');
         $('.th-drain').text(current.baseDrain);
-		$('.mod-image').empty().prepend('<img src="../../img/mods/' + current.name.toLowerCase().replace(/ /g,"_") + '.png" alt="" />');
+		$('.mod-image').empty().prepend('<img class="image-mod" src="../../img/mods/' + current.name.toLowerCase().replace(/ /g,"_") + '.png" alt="" />');
         if (current.tradable) {
             $('.th-tradable').empty().prepend('<a href="https://warframe.market/items/' + current.name.toLowerCase().replace(/ /g,"_") + '" target="_blank"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></a>');
         } else {
