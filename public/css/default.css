@@ -2,3 +2,8 @@ body {
 	margin: 5%;
 	overflow-y: scroll;
 }
+
+.image-mod {
+    max-width: 100%;
+    height: auto;
+}
