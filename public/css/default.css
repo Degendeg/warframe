@@ -12,3 +12,10 @@ body {
     white-space: normal !important;
     word-wrap: break-word;
 }
+
+.bottom-right {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
