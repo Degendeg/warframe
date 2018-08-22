@@ -7,3 +7,8 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+.btn-responsive {
+    white-space: normal !important;
+    word-wrap: break-word;
+}
