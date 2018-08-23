@@ -6,6 +6,7 @@
   "dependencies": {
     "express": "^4.13.3",
     "express-basic-auth": "^1.1.5",
+    "memory-cache": "^0.2.0",
     "nodemon": "^1.18.3",
     "warframe-items": "^1.29.0"
   },
