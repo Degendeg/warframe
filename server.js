@@ -13,6 +13,10 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/public/default.html');
 });
 
+app.get('/weapons', function(req, res) {
+  res.sendFile(__dirname + '/public/weapons.html');
+});
+
 var cache = (duration) => {
 	return (req, res, next) => {
 		let key = '__express__' + req.originalUrl || req.url;
