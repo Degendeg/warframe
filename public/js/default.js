@@ -1,6 +1,8 @@
 $(document).ready(function() {
 	
 	$('.table-mods').hide();
+	$('.no-result').hide();
+	$('.loader').hide();
 
     $('.thisYear').text((new Date()).getFullYear());
 
@@ -9,6 +11,7 @@ $(document).ready(function() {
     }
 
     function populateTable(current) {
+		$('.no-result').hide();
 		$('.table-mods').show();
         $('.th-name').empty().prepend('<a href="http://warframe.wikia.com/wiki/' + current.name + '" target="_blank">' + current.name + '</a>');
         $('.th-description').text(current.description);
@@ -23,6 +26,7 @@ $(document).ready(function() {
     }
 	
     function removeShit() {
+		$('.no-result').hide();
 		$('.table-mods').hide();
 		$('.typeahead').val("");
         $('.th-name').empty();
@@ -37,25 +41,30 @@ $(document).ready(function() {
 		removeShit();
 	});
 
-    $.get("/items", function(data) {
-        var mods = data.filter(checkForMods);
-        var $input = $(".typeahead");
+	$.get("/items", function(data) {
+		$('.loader').show();
+	}).done(function(data) {
+	  $('.loader').hide();
+	  var mods = data.filter(checkForMods);
+	  var $input = $(".typeahead");
 
-        $input.typeahead({
-            source: mods
-        });
+	  $input.typeahead({
+	    source: mods
+	  });
 
-        $input.change(function() {
-            var current = $input.typeahead("getActive");
-            if (current) {
-                if (current.name.toLowerCase() == $input.val().toLowerCase()) {
-                    populateTable(current);
-                } else {
-                    populateTable(current);
-                }
-            } else {
-                $('.result').text('No item was found, try again!');
-            }
-        });
-    });
+	  $input.change(function() {
+	    var current = $input.typeahead("getActive");
+	    if (current) {
+	      if (current.name.toLowerCase() == $input.val().toLowerCase()) {
+	        populateTable(current);
+	      } else {
+	        $('.no-result').show().text('No mod was found, try again!');
+	      }
+	    } else {
+	      $('.no-result').show().text('No mod was found, try again!');
+	    }
+	  });
+	}).fail(function(data, textStatus, xhr) {
+	  $('.no-result').show().text('Something went wrong, try again!');
+	}).always(function() {});
 });
