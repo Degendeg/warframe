@@ -42,9 +42,7 @@ $(document).ready(function() {
 	});
 
 	$.get("/items", function(data) {
-		$('.loader').show();
-	}).done(function(data) {
-	  $('.loader').hide();
+
 	  var mods = data.filter(checkForMods);
 	  var $input = $(".typeahead");
 
@@ -64,7 +62,5 @@ $(document).ready(function() {
 	      $('.no-result').show().text('No mod was found, try again!');
 	    }
 	  });
-	}).fail(function(data, textStatus, xhr) {
-	  $('.no-result').show().text('Something went wrong, try again!');
-	}).always(function() {});
+	});
 });
