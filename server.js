@@ -36,11 +36,11 @@ var cache = (duration) => {
 	}
 }
 
-app.get('/items', cache(10), basicAuth({
+app.get('/items', basicAuth({ //cache(10), basicAuth({
   users: {
     'urbz': 'seiko12345'
   },
-  challenge: true,
+  challenge: false,
   realm: 'Imb4T3st4pp',
   unauthorizedResponse: function getUnauthorizedResponse(req) {
     return req.auth ?
