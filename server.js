@@ -36,18 +36,22 @@ var cache = (duration) => {
 	}
 }
 
-app.get('/items', basicAuth({ //cache(10), basicAuth({
-  users: {
-    'urbz': 'seiko12345'
-  },
-  challenge: false,
-  realm: 'Imb4T3st4pp',
-  unauthorizedResponse: function getUnauthorizedResponse(req) {
-    return req.auth ?
-      ('Credentials rejected.') :
-      'No credentials provided.'
-  }
-}), function(req, res) {
+// app.get('/items', cache(10), basicAuth({
+  // users: {
+    // 'urbz': 'seiko12345'
+  // },
+  // challenge: false,
+  // realm: 'Imb4T3st4pp',
+  // unauthorizedResponse: function getUnauthorizedResponse(req) {
+    // return req.auth ?
+      // ('Credentials rejected.') :
+      // 'No credentials provided.'
+  // }
+// }), function(req, res) {
+	// res.send(items);
+// });
+
+app.get('/items', function(req, res) {
 	res.send(items);
 });
 
